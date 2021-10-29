@@ -14,6 +14,7 @@ jobs:
       - run: git config --global user.name "GitHub Actions"
       - run: git config --global user.email "noreply@noreply.com"
       # Bump the package.json version to whatever was specified, and commit the change
+      - run: git tag -d ${{ github.event.release.tag_name }}
       - run: npm version ${{ github.event.release.tag_name }}
       - run: git push origin HEAD:main
       - run: echo run npm publish here
