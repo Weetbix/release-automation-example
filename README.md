@@ -1,1 +1,3 @@
 # release-automation-example
+
+tests
