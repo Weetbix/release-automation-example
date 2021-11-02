@@ -17,5 +17,5 @@ jobs:
       - run: git tag -d ${{ github.event.release.tag_name }}
       - run: "npm version ${{ github.event.release.tag_name }} -m 'chore(release): bump version to %s'"
       - run: git push origin ${{ github.event.release.tag_name }} --force
-      - run: git push origin HEAD:main
+      - run: git push -f origin HEAD:main
       - run: echo run npm publish here
