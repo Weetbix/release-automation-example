@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ ADMIN_PAT }}
+          token: ${{ secrets.ADMIN_PAT }}
       - run: echo install dependencies, build package
       # Setup git credentials used for committing
       - run: git config --global user.name "github-actions[bot]"
